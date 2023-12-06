@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="circleFollower"></div>
     <nav>
       <ul>
-        <li class="logo">
+        <li class="logo navItem">
           <img src="logo.png" alt="Spotify logo" /><span>Spotify</span>
         </li>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li class="navItem">Home</li>
+        <li class="navItem">About</li>
       </ul>
     </nav>
     <div class="container">
       <div class="songList">
-        <h1>Best of DHH</h1>
+        <h1 class="text-target">Best of DHH</h1>
         <div class="songListContainer">
           <div class="songItem">
             <img class="songImg" src="./covers/1.png" alt="1" />
@@ -118,10 +118,32 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+      integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <!--  Gsap is needed for Basic Effects -->
+
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <!-- Recommended -->
+
     <script
       src="https://kit.fontawesome.com/328e1394fe.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>

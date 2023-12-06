@@ -1,130 +1,144 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-body{
-    background-color: rgb(14, 14, 14);
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+body {
+  background-color: rgb(14, 14, 14);
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-nav{
-    font-family: 'Ubuntu',sans-serif;
-}
-nav ul{
-    display:flex;
-    align-items: center;
-    list-style-type: none;
-    height: 65px;
-    background-color: black;
-    color: white;
-}
-nav ul li{
-    padding: 0 12px;
-}
-.logo img{
-    width: 45px;
-    padding: 0 8px;
-}
-.logo{
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
-}
-.container{
-    min-height: 70vh;
-    background-color: black;
-    color: white;
-    font-family: 'Varela Round', sans-serif;
-    display: flex;
-    width: 70%;
-    margin: 23px auto;
-    border-radius: 12px;
-    padding: 24px;
-    background-image: url("bg.png");
+#circleFollower {
+  position: absolute;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: rgb(255, 251, 251);
 }
 
-.bottom{
-    position: sticky;
-    background-color: black;
-    color: white;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+nav {
+  font-family: "Ubuntu", sans-serif;
 }
-.songListContainer{
-    margin-top: 60px;
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 65px;
+  background-color: black;
+  color: white;
 }
-.icons{
-    margin-top: 14px;
+.navItem {
+  position: relative;
+  top: -100px;
 }
-.icons i{
-    cursor: pointer;
+nav ul li {
+  padding: 0 12px;
 }
-#progressBar{
-    color: white;
-    background-color: black;
-    width: 80vw;
-    cursor: pointer;
+.logo img {
+  width: 45px;
+  padding: 0 8px;
 }
-
-
-.songItem{
-    height: 40px;
-    width: 80vh;
-    background-color: white;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 34px;
-    margin: 10px 0;
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
 }
-
-.songItem img{
-    width: 43px;
-    margin: 0 23px;
-    border-radius: 50%;
+.container {
+  opacity: 0;
+  min-height: 70vh;
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  width: 70%;
+  margin: 23px auto;
+  border-radius: 12px;
+  padding: 24px;
+  background-image: url("bg.png");
 }
 
-.songItemPlay{
-    padding: 0 20px;
+.bottom {
+  position: sticky;
+  background-color: black;
+  color: white;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.songListContainer {
+  margin-top: 60px;
+}
+.icons {
+  margin-top: 14px;
+}
+.icons i {
+  cursor: pointer;
+}
+#progressBar {
+  color: white;
+  background-color: black;
+  width: 80vw;
+  cursor: pointer;
 }
 
-.timeStamp{
-    margin: 0 23px;
+.songItem {
+  height: 40px;
+  width: 80vh;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+  margin: 10px 0;
 }
-.timeStamp i{
-    cursor: pointer;
+
+.songItem img {
+  width: 43px;
+  margin: 0 23px;
+  border-radius: 50%;
+}
+
+.songItemPlay {
+  padding: 0 20px;
+}
+
+.timeStamp {
+  margin: 0 23px;
+}
+.timeStamp i {
+  cursor: pointer;
 }
 
 .songInfo {
-    display: flex;
-    position: absolute;
-    left: 9.5vw;
-    font-family: 'Varela Round', sans-serif;
+  display: flex;
+  position: absolute;
+  left: 9.5vw;
+  font-family: "Varela Round", sans-serif;
 }
-.currentSongName{
-   padding-top: 13px;
+.currentSongName {
+  padding-top: 13px;
 }
-.songItemPlay{
-    cursor: pointer;
+.songItemPlay {
+  cursor: pointer;
 }
 @media only screen and (max-width: 480px) {
-    .currentSongName{
-        display: none;
-    }
-    .songImg{
-        display: none;
-    }
-    .songItem{
-        width: auto;
-        padding-left: 10px;
-        background-color: rgb(20, 20, 20);
-        color: white;
-    }
-
+  #circle {
+    display: none;
   }
+  .currentSongName {
+    display: none;
+  }
+  .songImg {
+    display: none;
+  }
+  .songItem {
+    width: auto;
+    padding-left: 10px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+  }
+}
